@@ -10,7 +10,7 @@ let pinAnswer = await inquirer.prompt([
     }
 ]);
 if (pinAnswer.pin === myPin) {
-    console.log("Your pin is correct!");
+    console.log("\n\tYour pin is correct!\n");
     let operationAns = await inquirer.prompt([
         {
             name: "operation",
@@ -61,5 +61,5 @@ if (pinAnswer.pin === myPin) {
     }
 }
 else {
-    console.log("Your pin is incorrect");
+    console.log("\n\tYour pin is incorrect\n");
 }

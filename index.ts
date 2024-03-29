@@ -15,7 +15,7 @@ let pinAnswer = await inquirer.prompt(
     ]
 );
 if (pinAnswer.pin === myPin){
-    console.log("Your pin is correct!");
+    console.log("\n\tYour pin is correct!\n");
 
     let operationAns = await inquirer.prompt(
         [
@@ -46,7 +46,7 @@ if (pinAnswer.pin === myPin){
         let remaining = myBalance - amountAns.amount;
         console.log(`${amountAns.amount} is withdrawn from ${myBalance} now your balance is ${remaining}`);
 }
-    }
+    }   
  else if (operationAns.operation === "Fast Cash") {
     let options = await inquirer.prompt(
         [
@@ -80,5 +80,5 @@ if (pinAnswer.pin === myPin){
   }
 
 } else {
-  console.log("Your pin is incorrect");
+  console.log("\n\tYour pin is incorrect\n");
 }
